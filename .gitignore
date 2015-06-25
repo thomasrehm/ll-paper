@@ -30,6 +30,7 @@
 *.ps
 *.run.xml
 *.snm
+*.synctex.gz(busy)
 *.synctex.gz
 *.toc
 *.vrb
