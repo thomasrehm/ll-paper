@@ -3,7 +3,9 @@
 %          IEEEbib.bst - IEEE bibliography style file.
 % --------------------------------------------------------------------------
 \documentclass{article}
-\usepackage{fmiconf,amsmath,epsfig}
+\usepackage{fmiconf,amsmath,epsfig,graphics}
+% Place images in the folder images
+\graphicspath{{images/}}
 
 % Example definitions.
 % --------------------
@@ -16,15 +18,15 @@
 %
 % Single address.
 % ---------------
-\name{Saskia Schreiber, Thomas Rehms)\thanks{Thanks to XYZ agency for funding.}}
+\name{Autoren Name\thanks{Thanks to XYZ agency for funding.}}
 \address{Author Affiliation(s)}
-%
+
 % For example:
 % ------------
-%\address{School\\
-%	Department\\
-%	Address}
-%
+\address{School\\
+	Department\\
+	Address}
+
 % Two addresses (uncomment and modify for two-address case).
 % ----------------------------------------------------------
 %\twoauthors
