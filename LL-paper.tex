@@ -2,26 +2,15 @@
 %          fmiconf.sty - LaTeX style file, and
 %          IEEEbib.bst - IEEE bibliography style file.
 % --------------------------------------------------------------------------
-
-% !TeX encoding = utf8
-
 \documentclass{article}
-\usepackage{fmiconf,amsmath,epsfig,graphics,hyperref}
+\usepackage{fmiconf,epsfig,graphics,hyperref,ngerman}
+%\usepackage{listings, color} % code listing
 \usepackage[utf8]{inputenc} % UTF-8-Codierung
-\usepackage[
-english, % Englische Rechtschreibung
-ngerman  % neue Deutsche Rechtschreibung (wenn hier auch \"uberschriften)
-]{babel} % Silbentrennung etc.
-%\usepackage{marvosym} % Sonderzeichen
-
+\usepackage[ngerman]{babel} % Silbentrennung etc.
+\usepackage{marvosym} % Sonderzeichen
 
 % Place images in the folder images
 \graphicspath{{images/}}
-
-% Example definitions.
-% --------------------
-\def\x{{\mathbf x}}
-\def\L{{\cal L}}
 
 \title{Entwicklung eines Web Based Trainigs zum Thema Fotografie}
 
@@ -54,7 +43,7 @@ Web Based Training, Fotografie
 \section{Einleitung}
 \label{sec:intro}
 
-Im Rahmen der Veranstaltung ``Lehren und Lernen mit neuen Medien'' wurde von der Psychologiestudentin Teresa Hoffmann (Justus-Liebig-Universit\"at Giessen, JLU) und den Medieninformatik-Masterstudenten Thomas Rehm und Saskia Schreiber (Technische Hochschule Mittelhessen, THM) ein Web Based Training (WBT) zum Thema Fotografie entwickelt.
+Im Rahmen der Veranstaltung \emph{Lehren und Lernen mit neuen Medien} wurde von der Psychologiestudentin Teresa Hoffmann (Justus-Liebig-Universit\"at Giessen, JLU) und den Medieninformatik-Masterstudenten Thomas Rehm und Saskia Schreiber (Technische Hochschule Mittelhessen, THM) ein Web Based Training (WBT) zum Thema Fotografie entwickelt.
 
 Das prim\"are Ziel des Trainings sollte die Vermittlung grundlegender Kenntnisse \"uber die Funktionalit\"at einer Kamera sein. Darauf aufbauend sollte der Trainee Anregungen \"uber die kreative Nutzung dieser Kenntnisse erhalten.
 Aus dieser Zielsetzung ergab sich folgende thematische Unterteilung:
@@ -88,13 +77,13 @@ Im Folgenden wird tiefer auf die psychologischen, inhaltlichen und technischen A
 \label{ssec:psy}
 Bei der Konzeption des Trainings wurden verschiedene wissenschaftliche Erkenntnisse aus lern- und medienpsychologischer Forschung ber\"ucksichtigt.
 
-Inhaltlich wurde in den Abschnitten ``Kameratypen'' und ``Technische Grundlagen'' zun\"achst deklaratives Grundlagenwissen vermittelt und in den anschlie{\ss}enden Tests abgefragt. Auf diesem Wissen baute die Lektion ``Kreative Aspekte'' auf. Damit Lernende mit unterschiedlichem Vorwissen von dem Training profitieren k\"onnen, waren alle Hauptthemenbereiche von Anfang an zug\"anglich und nicht nacheinander freigeschaltet. Auf diese Weise werden (fortgeschrittene) Lernende nicht zu sehr in ihren Interessen eingeschr\"ankt und exploratives Lernen erm\"oglicht.
+Inhaltlich wurde in den Abschnitten \emph{Kameratypen} und \emph{Technische Grundlagen} zun\"achst deklaratives Grundlagenwissen vermittelt und in den anschlie{\ss}enden Tests abgefragt. Auf diesem Wissen baute die Lektion \emph{Kreative Aspekte} auf. Damit Lernende mit unterschiedlichem Vorwissen von dem Training profitieren k\"onnen, waren alle Hauptthemenbereiche von Anfang an zug\"anglich und nicht nacheinander freigeschaltet. Auf diese Weise werden (fortgeschrittene) Lernende nicht zu sehr in ihren Interessen eingeschr\"ankt und exploratives Lernen erm\"oglicht.
 
 Die Tests wurden gezielt nicht nur nach Abschluss der Hauptkapitel platziert, sondern als obligatorische Zwischenpr\"ufungen nach einzelnen Themenbl\"ocken eingesetzt. Dadurch erh\"alt der Lernende direkt ein Feedback zu seinem Wissensstand und kann gegebenenfalls Inhalte erneut lesen, wenn er Teile nicht verstanden hat.
 
 Da jedoch das Ziel war, nicht nur deklaratives Wissen, sondern die richtige und kreative Bedienung einer Kamera zu vermitteln, wurde ein Kamerasimulator integriert. Der Kamerasimulator erm\"oglicht es zum Beispiel, \"anderungen an den Blendeneinstellungen live am Bild zu sehen. \"uber einen Button konnte so jederzeit das Gelernte ausprobiert und dadurch in prozedurales Wissen transferiert werden. 
 
-Bei der Erstellung der Inhalte wurde auf die gute Verst\"andlichkeit der Texte geachtet. Als Orientierung diente dabei das ``Hamburger Verst\"andlichkeitskonzept'' von Langer, Schulz von Thun und Tausch (2006)\cite{rey2009e-learning}, laut dem sich verst\"andliche Texte durch vier Merkmale auszeichnen: Einfachheit, Gliederung und Ordnung, K\"urze und Pr\"agnanz und anregende Zus\"atze. Weiterhin wurde eine informelle Sprache und pers\"onliche Anrede benutzt, was nach dem Personalisierungsprinzip der kognitiven Theorie multimedialen Lernens (Cognitive Theory of Multimedia Learning von Richard E. Mayer) das Lernen erleichtert. 
+Bei der Erstellung der Inhalte wurde auf die gute Verst\"and-lichkeit der Texte geachtet. Als Orientierung diente dabei das ``Hamburger Verst\"andlichkeitskonzept'' von Langer, Schulz von Thun und Tausch (2006)\cite{rey2009e-learning}, laut dem sich verst\"andliche Texte durch vier Merkmale auszeichnen: Einfachheit, Gliederung und Ordnung, K\"urze und Pr\"agnanz und anregende Zus\"atze. Weiterhin wurde eine informelle Sprache und pers\"onliche Anrede benutzt, was nach dem Personalisierungsprinzip der kognitiven Theorie multimedialen Lernens (Cognitive Theory of Multimedia Learning von Richard E. Mayer) das Lernen erleichtert. 
 Zur besseren Verst\"andlichkeit wurden ebenfalls viele Bilder eingef\"ugt, die die Inhalte verdeutlichen. Um dem negativen Effekt der geteilten Aufmerksamkeit (Split-Attention Effect) entgegenzuwirken, wurden die Bilder immer direkt beim dazugeh\"origen Text platziert. 
 
 
@@ -103,35 +92,35 @@ Ein Aspekt dieses Konzeptes war die Entscheidung, die Hauptthemen nicht nacheina
 Weiterhin wurde f\"ur die Texte auf informelle Sprache und pers\"onliche Anrede geachtet, was nach der kognitiven Theorie das Lernen erleichtert.
 
 Ein besonders wichtiges Feature ist der integrierte Kamerasimulator, der jederzeit \"uber einen Button zu erreichen ist. Da es sich bei den technischen Themen teils um recht trockene Theorie handelt, muss es eine M\"oglichkeit geben, die gelernten Informationen in der Praxis zu erleben. Der Kamerasimulator erm\"oglicht es zum Beispiel, \"anderungen an den Blendeneinstellungen live am Bild zu sehen.
+
+
 \subsection{Technische Aspekte}
 \label{ssec:tech}
 Die technische Grundlage des WBT bildet das von Studenten der Technischen Hochschule Mittelhessen entwickelte WBT-Framework.
 
-Um dieses Framework sinnvoll um eigene Komponenten erweitern zu k\"onnen, wurde sich f\"ur eine Einbindung als Git-Submodul entschieden, sodass das Hauptrepository allein aus den neu erstellen Inhalten besteht. Das hat den Vorteil, dass Updates und Bugfixes am Framework ohne Konflikte in das Projekt integriert werden k\"onnen. Auch mit den in diesem Kapitel erl\"auterten Erweiterungen wurde so verfahren, sofern es sich um Fremdcode handelt.
+Um dieses Framework sinnvoll um eigene Komponenten erweitern zu k\"onnen, wurde sich f\"ur eine Einbindung als Git-Submodul\footnote{\url{https://git-scm.com/book/en/v2/Git-Tools-Submodules}} entschieden, sodass das Hauptrepository allein aus den neu erstellen Inhalten besteht. Das hat den Vorteil, dass Updates und Bugfixes am Framework ohne Konflikte in das Projekt integriert werden k\"onnen. Auch mit den in diesem Kapitel erl\"auterten Erweiterungen wurde so verfahren, sofern es sich um Fremdcode handelt.
 
-Um die Ver\"offentlichung des WBT so direkt und unkompliziert f\"ur die Entwickler zu machen, wurde sich f\"ur die Nutzung des frei verf\"ugbaren GitHub Pages Services entschieden, der sich optimal in den bestehenden Git-Workflow einf\"ugt. GitHub hostet mit GitHub Pages kostenlos statische Webanwendungen, die Code-Projekte auf GitHub mit einer einfachen Projektpage versorgen. Pages integriert sich insofern nahtlos in den Workflow mit Git und GitHub da zur Ver\"offentlichung einer GitHub Pages Webseite lediglich der Branch “gh-pages” angelegt werden muss. GitHub crawlt jedes Repository und erstellt dann die Webseite aus dem gh-pages-Branch. Durch pushen in diesen Branch wird die neue Version im Hintergrund gebaut. GitHub Pages ist kompatibel mit Git Submodulen pr\"uft beim Build-Prozess ob alles gelingt. Treten Fehler beim Build auf, wird der Entwickler benachrichtigt.
+Um die Ver\"offentlichung des WBT so direkt und unkompliziert f\"ur die Entwickler zu machen, wurde sich f\"ur die Nutzung des frei verf\"ugbaren GitHub Pages\footnote{\url{https://help.github.com/articles/what-are-github-pages/}} Services entschieden, der sich optimal in den bestehenden Git-Workflow einf\"ugt. GitHub hostet mit GitHub Pages kostenlos statische Webanwendungen, die Code-Projekte auf GitHub mit einer einfachen Projektpage versorgen. Pages integriert sich insofern nahtlos in den Workflow mit Git und GitHub da zur Ver\"offentlichung einer GitHub Pages Webseite lediglich der Branch “gh-pages” angelegt werden muss. GitHub crawlt jedes Repository und erstellt dann die Webseite aus dem gh-pages-Branch. Durch pushen in diesen Branch wird die neue Version im Hintergrund gebaut. GitHub Pages ist kompatibel mit Git Submodulen pr\"uft beim Build-Prozess ob alles gelingt. Treten Fehler beim Build auf, wird der Entwickler benachrichtigt.
 
-Da das Framework aus dem DOM der HTML-Seite die eigentliche Webanwendung (Sections, Article, Navigation, Fragemodule etc.) beim Laden generiert, m\"ussen alle Inhalte zum Zeitpunkt des Initialisierungsprozesses des Frameworks im DOM vorhanden sein. Ein solches HTML-Dokument kann schnell einige hundert Zeilen lang werden und ist damit sehr unangenehm f\"ur einen Redakteur mit Inhalten zu bef\"ullen und zu pflegen. 
+Da das Framework aus dem DOM\footnote{\url{https://developer.mozilla.org/en-US/docs/Glossary/DOM}} der HTML-Seite die eigentliche Webanwendung (Sections, Article, Navigation, Fragemodule etc.) beim Laden generiert, m\"ussen alle Inhalte zum Zeitpunkt des Initialisierungsprozesses des Frameworks im DOM vorhanden sein. Ein solches HTML-Dokument kann schnell einige hundert Zeilen lang werden und ist damit sehr unangenehm f\"ur einen Redakteur mit Inhalten zu bef\"ullen und zu pflegen. 
 
 Das Team entschloss sich die verwendenten Tools zu verwenden, um eine elegantere L\"osung zu schaffen: Der sog. ContentLoader vereint mehrere Techniken, um die Arbeit an den Inhalten zu vereinfachen. Die Funktionsweise sieht folgenden Ablauf vor:
 \begin{itemize}
-\item Redakteur schreibt Inhalte und Struktur in einem ver\"offentlichten Google Spreadsheet 
+\item Redakteur schreibt Inhalte und Struktur in einem ver\"offentlichten Google Spreadsheet\footnote{\url{https://docs.google.com/spreadsheets/d/1U7imA8NCahaqeIT3jlz-3J-mTuRZyrYs1rUlTZsnO_M/edit?usp=sharing}}
 \item Das Spreadsheet sieht folgende Spalten vor:
-
 SectionHeadline, ArticleHeadline, ContentType, Content
-
 \item Sections und Articles k\"onnen definiert werden
-\item Verlinkung von Bildern aus einem Google Drive Order erfolgt \"uber Namensnennung des Bildes + Dateiendung
+\item Verlinkung von Bildern aus einem Google Drive Ordner\footnote{\url{https://drive.google.com/open?id=0B91vQ2ujyzQMfjJjNDRGb0tzeEJ3V0pHUnZXcTl4TldOU3hLekM5Yjd2dXlzdU5jQjRkZUE}} erfolgt \"uber Namensnennung des Bildes + Dateiendung
 \item Redakteur hat zus\"atzlich mehrere ContentTypes zur Verf\"ugung: Listen (neutral, positiv, negativ), Subheadlines, Bilder (aus Drive-Ordner oder URL)
 
 \end{itemize}
 
-Der ContentLoader ist ein JavaScript Script, das per AJAX die Inhalte aus dem Spreadsheet im JSON Format l\"adt und dann in den DOM einf\"ugt. Das Script liest die Inhaltselemente linear ein und verarbeitet diese je nach ContentType.
-
-Um den ContentLoader realisieren zu k\"onnen wurde der Initialisierungsaufruf des Frameworks vom an den GlobalEventHandler “window.load” gebunden. Dieses Event wird erst ausgel\"ost, wenn alle Elemente des DOM fertig aufgebaut sind. Bisher wurde das Framework mit dem Event “document.ready” initialisiert, was vorausgesetzt hat, das die Inhalte komplett im HTML Dokument vorhanden sind.
+Der ContentLoader ist ein JavaScript Script\footnote{\url{https://github.com/thomasrehm/wbt-fotografie/blob/master/res/js/script.js\#L40-L99}}, das per AJAX die Inhalte aus dem Spreadsheet im JSON Format\footnote{\url{https://spreadsheets.google.com/feeds/list/1U7imA8NCahaqeIT3jlz-3J-mTuRZyrYs1rUlTZsnO_M/od6/public/values?alt=json-in-script}} l\"adt und dann in den DOM einf\"ugt. Das Script liest die Inhaltselemente linear ein und verarbeitet diese je nach ContentType.
 
 
-Wie bereits in den inhaltlichen Aspekten erw\"ahnt, war es bei der Wahl des Themas Fotografie sinnvoll, eine interaktive M\"oglichkeit zum Ausprobieren der gelernten Einstellungen zu schaffen. Daf\"ur wurde die JavaScript-Applikation bethecamera verwendet, ein interaktiver HTML5-Kamerasimulator, der \"Anderungen an Kameraeinstellungen in Echtzeit an verschiedenen Beispielbildern demonstriert.
+Um den ContentLoader realisieren zu k\"onnen wurde der Initialisierungsaufruf des Frameworks vom an den GlobalEventHandler \texttt{window.load}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload}} gebunden. Dieses Event wird erst ausgel\"ost, wenn alle Elemente des DOM fertig aufgebaut sind. Bisher wurde das Framework mit dem Event \texttt{document.ready}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState}} initialisiert, was vorausgesetzt hat, das die Inhalte komplett im HTML Dokument vorhanden sind.
+
+Wie bereits in den inhaltlichen Aspekten erw\"ahnt, war es bei der Wahl des Themas Fotografie sinnvoll, eine interaktive M\"oglichkeit zum Ausprobieren der gelernten Einstellungen zu schaffen. Daf\"ur wurde die JavaScript-Applikation bethecamera\footnote{\url{http://bethecamera.com/}} verwendet, ein interaktiver HTML5-Kamerasimulator, der \"Anderungen an Kameraeinstellungen in Echtzeit an verschiedenen Beispielbildern demonstriert.
 
 Der Simulator verwendet zum Rendern der Bilder das HTML5-Canvas-Element. 
 Die verwendeten Bilder m\"ussen vorher entsprechend aufbereitet werden: Das Bild sollte idealerweise als HDRI (High Dynamic Range Image) vorliegen, damit \"Anderungen der Helligkeit im Simulator die gew\"unschten Effekte zeigen k\"onnen. 
@@ -140,7 +129,7 @@ Zus\"atzlich muss der Vordergrund des Bildes ausgeschnitten und als PNG mit Alph
 
 Da die im Simulator mitgelieferten Bilder sehr gut funktionieren, wurde auf die Erg\"anzung weiterer Bilder verzichtet. Die aktuelle Umsetzung erm\"oglicht aber eine Weiterentwicklung in dieser Hinsicht.
 
-Integriert wurde der Simulator so, dass er bei Bedarf per AJAX in ein Bootstrap-Modal geladen wird. Das erh\"oht die initiale Ladezeit der Seite und erm\"oglicht au{\ss}erdem, dass der Nutzer das aktuell aufgerufene Thema nicht verlassen muss. Gerade f\"ur das Ausprobieren zwischendurch ist dieses Kriterium essenziell.
+Integriert wurde der Simulator so, dass er bei Bedarf per AJAX in ein Bootstrap-Modal\footnote{\url{http://getbootstrap.com/javascript/\#modals}} geladen wird. Das erh\"oht die initiale Ladezeit der Seite und erm\"oglicht au{\ss}erdem, dass der Nutzer das aktuell aufgerufene Thema nicht verlassen muss. Gerade f\"ur das Ausprobieren zwischendurch ist dieses Kriterium essenziell.
 
 Zuguterletzt wurde f\"ur eine optimale Pr\"asentation des Themas ein eigenes Stylesheet angelegt, welches auf dem WBT-Stylesheet aufbaut und dieses teilweise \"uberschreibt. Dadurch wird ein gewisser Wiedererkennungswert geschaffen, zumal das Standard-Theme von Bootstrap mittlerweile sehr h\"aufig im Web zum Einsatz kommt. 
 
@@ -157,154 +146,14 @@ Zuguterletzt wurde f\"ur eine optimale Pr\"asentation des Themas ein eigenes Sty
 
 \subsection{Kritische Beurteilung des Autorentools/WBT Frameworks}
 
-% ------------------------------
-%
-%\section{TYPE-STYLE AND FONTS}
-%\label{sec:typestyle}
-%
-%To achieve the best rendering both in the proceedings and from the CD-ROM, we
-%strongly encourage you to use Times-Roman font.  In addition, this will give
-%the proceedings a more uniform look.  Use a font that is no smaller than nine
-%point type throughout the paper, including figure captions.
-%
-%In nine point type font, capital letters are 2 mm high.  If you use the
-%smallest point size, there should be no more than 3.2 lines/cm (8 lines/inch)
-%vertically.  This is a minimum spacing; 2.75 lines/cm (7 lines/inch) will make
-%the paper much more readable.  Larger type sizes require correspondingly larger
-%vertical spacing.  Please do not double-space your paper.  True-Type 1 fonts
-%are preferred.
-%
-%The first paragraph in each section should not be indented, but all the
-%following paragraphs within the section should be indented as these paragraphs
-%demonstrate.
-%
-%\section{MAJOR HEADINGS}
-%\label{sec:majhead}
-%
-%Major headings, for example, "1. Introduction", should appear in all capital
-%letters, bold face if possible, centered in the column, with one blank line
-%before, and one blank line after. Use a period (".") after the heading number,
-%not a colon.
-%
-%\subsection{Subheadings}
-%\label{ssec:subhead}
-%
-%Subheadings should appear in lower case (initial word capitalized) in
-%boldface.  They should start at the left margin on a separate line.
-% 
-%\subsubsection{Sub-subheadings}
-%\label{sssec:subsubhead}
-%
-%Sub-subheadings, as in this paragraph, are discouraged. However, if you
-%must use them, they should appear in lower case (initial word
-%capitalized) and start at the left margin on a separate line, with paragraph
-%text beginning on the following line.  They should be in italics.
-%
-%\section{PRINTING YOUR PAPER}
-%\label{sec:print}
-%
-%Print your properly formatted text on high-quality, 8.5 x 11-inch white printer
-%paper. A4 paper is also acceptable, but please leave the extra 0.5 inch (12 mm)
-%empty at the BOTTOM of the page and follow the top and left margins as
-%specified.  If the last page of your paper is only partially filled, arrange
-%the columns so that they are evenly balanced if possible, rather than having
-%one long column.
-%
-%In LaTeX, to start a new column (but not a new page) and help balance the
-%last-page column lengths, you can use the command ``$\backslash$pagebreak'' as
-%demonstrated on this page (see the LaTeX source below).
-%
-%\section{PAGE NUMBERING}
-%\label{sec:page}
-%
-%Please do {\bf not} paginate your paper.  Page numbers, session numbers, and
-%conference identification will be inserted when the paper is included in the
-%proceedings.
-%
-%\section{ILLUSTRATIONS, GRAPHS, AND PHOTOGRAPHS}
-%\label{sec:illust}
-%
-%Illustrations must appear within the designated margins.  They may span the two
-%columns.  If possible, position illustrations at the top of columns, rather
-%than in the middle or at the bottom.  Caption and number every illustration.
-%All halftone illustrations must be clear black and white prints.  Do not use
-%any colors in illustrations.
-%
-%Since there are many ways, often incompatible, of including images (e.g., with
-%experimental results) in a LaTeX document, below is an example of how to do
-%this.
-%
-%% Below is an example of how to insert images. Delete the ``\vspace'' line,
-%% uncomment the preceding line ``\centerline...'' and replace ``imageX.ps''
-%% with a suitable PostScript file name.
-%% -------------------------------------------------------------------------
-%\begin{figure}[htb]
-%
-%\begin{minipage}[b]{1.0\linewidth}
-%  \centering
-% %\centerline{\epsfig{figure=image1.eps,width=8.5cm}}
-%\centerline{\includegraphics[width=85mm]{image1.png}}
-%%  \vspace{2.0cm}
-%  \centerline{(a) Result 1}\medskip
-%\end{minipage}
-%%
-%\begin{minipage}[b]{.48\linewidth}
-%  \centering
-% %\centerline{\epsfig{figure=image3.eps,width=4.0cm}}
-%\centerline{\includegraphics[width=40mm]{image3.png}}
-%%  \vspace{1.5cm}
-%  \centerline{(b) Results 3}\medskip
-%\end{minipage}
-%\hfill
-%\begin{minipage}[b]{0.48\linewidth}
-%  \centering
-%% \centerline{\epsfig{figure=image4.eps,width=4.0cm}}
-%\centerline{\includegraphics[width=40mm]{image4.png}}
-%%  \vspace{1.5cm}
-%  \centerline{(c) Result 4}\medskip
-%\end{minipage}
-%%
-%\caption{Example of placing a figure with experimental results.}
-%\label{fig:res}
-%%
-%\end{figure}
-%
-%% To start a new column (but not a new page) and help balance the last-page
-%% column length use \vfill\pagebreak.
-%% -------------------------------------------------------------------------
-%\vfill
-%\pagebreak
-%
-%
-%\section{FOOTNOTES}
-%\label{sec:foot}
-%
-%Use footnotes sparingly (or not at all!) and place them at the bottom of the
-%column on the page on which they are referenced. Use Times 9-point type,
-%single-spaced. To help your readers, avoid using footnotes altogether and
-%include necessary peripheral observations in the text (within parentheses, if
-%you prefer, as in this sentence).
-%
-%
-%\section{COPYRIGHT FORMS}
-%\label{sec:copyright}
-%
-%You must include your fully completed, signed IEEE copyright release form when
-%you submit your paper. We {\bf must} have this form before your paper can be
-%published in the proceedings.  The copyright form is available as a Word file,
-%a PDF file, and an HTML file. You can also use the form sent with your author
-%kit.
-%
-%\section{REFERENCES}
-%\label{sec:ref}
-%
-%List and number all bibliographical references at the end of the paper.  The references can be numbered in alphabetic order or in order of appearance in the document.  When referring to them in the text, type the corresponding reference number in square brackets as shown at the end of this sentenc.
-% ------------------------------
+
 % References should be produced using the bibtex program from suitable
 % BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
 % style file from IEEE produces unsorted bibliography list.
 % -------------------------------------------------------------------------
-\bibliographystyle{IEEEbib}
+%\bibliographystyle{IEEEbib}
+\vfill
+\pagebreak
+\bibliographystyle{alpha}
 \bibliography{refs}
-
 \end{document}
