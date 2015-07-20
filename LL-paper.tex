@@ -3,14 +3,23 @@
 %          IEEEbib.bst - IEEE bibliography style file.
 % --------------------------------------------------------------------------
 \documentclass{article}
-\usepackage{fmiconf,epsfig,graphics,hyperref,ngerman}
-%\usepackage{listings, color} % code listing
-\usepackage[utf8]{inputenc} % UTF-8-Codierung
-\usepackage[ngerman]{babel} % Silbentrennung etc.
-\usepackage{marvosym} % Sonderzeichen
+% deutsche Silbentrennung
+\usepackage[ngerman]{babel}
+
+
+% wegen deutschen Umlauten
+\usepackage[utf8]{inputenc}
+\usepackage{fmiconf,epsfig,graphics}
+\usepackage[hyphens]{url}
+\usepackage{hyperref}
+
+
+
+%\usepackage{marvosym} % Sonderzeichen
 
 % Place images in the folder images
 \graphicspath{{images/}}
+
 
 \title{Entwicklung eines Web Based Trainigs zum Thema Fotografie}
 
@@ -24,22 +33,24 @@
 %
 \begin{document}
 %\ninept
+% Inhaltsverzeichnis anzeigen
+%\tableofcontents
 %
 \maketitle
 %
-\begin{abstract}
-The abstract should appear at the top of the lft-hand column of text, about
-0.5 inch (12 mm) below the title area and no more than 3.125 inches (80 mm) in
-length.  Leave a 0.5 inch (12 mm) space between the end of the abstract and the
-beginning of the main text.  The abstract should contain about 100 to 150
-words, and should be identical to the abstract text submitted electronically
-along with the paper cover sheet. All manuscripts must be in German or English, printed in black ink.
-\end{abstract}
-%
-\begin{keywords}
-Web Based Training, Fotografie
-\end{keywords}
-%
+%\begin{abstract}
+%The abstract should appear at the top of the lft-hand column of text, about
+%0.5 inch (12 mm) below the title area and no more than 3.125 inches (80 mm) in
+%length.  Leave a 0.5 inch (12 mm) space between the end of the abstract and the
+%beginning of the main text.  The abstract should contain about 100 to 150
+%words, and should be identical to the abstract text submitted electronically
+%along with the paper cover sheet. All manuscripts must be in German or English, printed in black ink.
+%\end{abstract}
+%%
+%\begin{keywords}
+%Web Based Training, Fotografie
+%\end{keywords}
+%%
 \section{Einleitung}
 \label{sec:intro}
 
@@ -83,8 +94,8 @@ Die Tests wurden gezielt nicht nur nach Abschluss der Hauptkapitel platziert, so
 
 Da jedoch das Ziel war, nicht nur deklaratives Wissen, sondern die richtige und kreative Bedienung einer Kamera zu vermitteln, wurde ein Kamerasimulator integriert. Der Kamerasimulator erm\"oglicht es zum Beispiel, \"anderungen an den Blendeneinstellungen live am Bild zu sehen. \"uber einen Button konnte so jederzeit das Gelernte ausprobiert und dadurch in prozedurales Wissen transferiert werden. 
 
-Bei der Erstellung der Inhalte wurde auf die gute Verst\"and-lichkeit der Texte geachtet. Als Orientierung diente dabei das ``Hamburger Verst\"andlichkeitskonzept'' von Langer, Schulz von Thun und Tausch (2006)\cite{rey2009e-learning}, laut dem sich verst\"andliche Texte durch vier Merkmale auszeichnen: Einfachheit, Gliederung und Ordnung, K\"urze und Pr\"agnanz und anregende Zus\"atze. Weiterhin wurde eine informelle Sprache und pers\"onliche Anrede benutzt, was nach dem Personalisierungsprinzip der kognitiven Theorie multimedialen Lernens (Cognitive Theory of Multimedia Learning von Richard E. Mayer) das Lernen erleichtert. 
-Zur besseren Verst\"andlichkeit wurden ebenfalls viele Bilder eingef\"ugt, die die Inhalte verdeutlichen. Um dem negativen Effekt der geteilten Aufmerksamkeit (Split-Attention Effect) entgegenzuwirken, wurden die Bilder immer direkt beim dazugeh\"origen Text platziert. 
+Bei der Erstellung der Inhalte wurde auf die gute Verst\"and-lichkeit der Texte geachtet. Als Orientierung diente dabei das ``Hamburger Verst\"andlichkeitskonzept'' von Langer, Schulz von Thun und Tausch (2006)\cite{rey2009e-learning}, laut dem sich verst\"andliche Texte durch vier Merkmale auszeichnen: Einfachheit, Gliederung und Ordnung, K\"urze und Pr\"agnanz und anregende Zus\"atze. Weiterhin wurde eine informelle Sprache und pers\"onliche Anrede benutzt, was nach dem Personalisierungsprinzip der kognitiven Theorie multimedialen Lernens (Cognitive Theory of Multimedia Learning von Richard E. Mayer)\cite{rey2009e-learning} das Lernen erleichtert. 
+Zur besseren Verst\"andlichkeit wurden ebenfalls viele Bilder eingef\"ugt, die die Inhalte verdeutlichen. Um dem negativen Effekt der geteilten Aufmerksamkeit (Split-Attention Effect)\cite{rey2009e-learning} entgegenzuwirken, wurden die Bilder immer direkt beim dazugeh\"origen Text platziert. 
 
 
 Die Inhalte des Trainings wurden nach aktuellen Erkenntnissen der Lerntheorie konzipiert, um sowohl Novizen als auch fortgeschrittenen Benutzern einen schnellen Lernerfolg zu erm\"oglichen.
@@ -98,7 +109,7 @@ Ein besonders wichtiges Feature ist der integrierte Kamerasimulator, der jederze
 \label{ssec:tech}
 Die technische Grundlage des WBT bildet das von Studenten der Technischen Hochschule Mittelhessen entwickelte WBT-Framework.
 
-Um dieses Framework sinnvoll um eigene Komponenten erweitern zu k\"onnen, wurde sich f\"ur eine Einbindung als Git-Submodul\footnote{\url{https://git-scm.com/book/en/v2/Git-Tools-Submodules}} entschieden, sodass das Hauptrepository allein aus den neu erstellen Inhalten besteht. Das hat den Vorteil, dass Updates und Bugfixes am Framework ohne Konflikte in das Projekt integriert werden k\"onnen. Auch mit den in diesem Kapitel erl\"auterten Erweiterungen wurde so verfahren, sofern es sich um Fremdcode handelt.
+Um dieses Framework sinnvoll um eigene Komponenten erweitern zu k\"onnen, wurde sich f\"ur eine Einbindung als Git-Submodul\cite[S. 341 ff.]{chacon2014pro} entschieden, sodass das Hauptrepository allein aus den neu erstellen Inhalten besteht. Das hat den Vorteil, dass Updates und Bugfixes am Framework ohne Konflikte in das Projekt integriert werden k\"onnen. Auch mit den in diesem Kapitel erl\"auterten Erweiterungen wurde so verfahren, sofern es sich um Fremdcode handelt.
 
 Um die Ver\"offentlichung des WBT so direkt und unkompliziert f\"ur die Entwickler zu machen, wurde sich f\"ur die Nutzung des frei verf\"ugbaren GitHub Pages\footnote{\url{https://help.github.com/articles/what-are-github-pages/}} Services entschieden, der sich optimal in den bestehenden Git-Workflow einf\"ugt. GitHub hostet mit GitHub Pages kostenlos statische Webanwendungen, die Code-Projekte auf GitHub mit einer einfachen Projektpage versorgen. Pages integriert sich insofern nahtlos in den Workflow mit Git und GitHub da zur Ver\"offentlichung einer GitHub Pages Webseite lediglich der Branch “gh-pages” angelegt werden muss. GitHub crawlt jedes Repository und erstellt dann die Webseite aus dem gh-pages-Branch. Durch pushen in diesen Branch wird die neue Version im Hintergrund gebaut. GitHub Pages ist kompatibel mit Git Submodulen pr\"uft beim Build-Prozess ob alles gelingt. Treten Fehler beim Build auf, wird der Entwickler benachrichtigt.
 
@@ -110,7 +121,7 @@ Das Team entschloss sich die verwendenten Tools zu verwenden, um eine elegantere
 \item Das Spreadsheet sieht folgende Spalten vor:
 SectionHeadline, ArticleHeadline, ContentType, Content
 \item Sections und Articles k\"onnen definiert werden
-\item Verlinkung von Bildern aus einem Google Drive Ordner\footnote{\url{https://drive.google.com/open?id=0B91vQ2ujyzQMfjJjNDRGb0tzeEJ3V0pHUnZXcTl4TldOU3hLekM5Yjd2dXlzdU5jQjRkZUE}} erfolgt \"uber Namensnennung des Bildes + Dateiendung
+\item Verlinkung von Bildern aus einem Google Drive Ordner erfolgt \"uber Namensnennung des Bildes + Dateiendung
 \item Redakteur hat zus\"atzlich mehrere ContentTypes zur Verf\"ugung: Listen (neutral, positiv, negativ), Subheadlines, Bilder (aus Drive-Ordner oder URL)
 
 \end{itemize}
@@ -121,6 +132,16 @@ Der ContentLoader ist ein JavaScript Script\footnote{\url{https://github.com/tho
 Um den ContentLoader realisieren zu k\"onnen wurde der Initialisierungsaufruf des Frameworks vom an den GlobalEventHandler \texttt{window.load}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/GlobalEventHandlers/onload}} gebunden. Dieses Event wird erst ausgel\"ost, wenn alle Elemente des DOM fertig aufgebaut sind. Bisher wurde das Framework mit dem Event \texttt{document.ready}\footnote{\url{https://developer.mozilla.org/en-US/docs/Web/API/Document/readyState}} initialisiert, was vorausgesetzt hat, das die Inhalte komplett im HTML Dokument vorhanden sind.
 
 Wie bereits in den inhaltlichen Aspekten erw\"ahnt, war es bei der Wahl des Themas Fotografie sinnvoll, eine interaktive M\"oglichkeit zum Ausprobieren der gelernten Einstellungen zu schaffen. Daf\"ur wurde die JavaScript-Applikation bethecamera\footnote{\url{http://bethecamera.com/}} verwendet, ein interaktiver HTML5-Kamerasimulator, der \"Anderungen an Kameraeinstellungen in Echtzeit an verschiedenen Beispielbildern demonstriert.
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+\centerline{\includegraphics[width=\linewidth]{kamerasimulator.png}}
+\end{minipage}
+\caption{Screenshot Kamerasimulator.}
+\label{fig:res}
+\end{figure}
+
 
 Der Simulator verwendet zum Rendern der Bilder das HTML5-Canvas-Element. 
 Die verwendeten Bilder m\"ussen vorher entsprechend aufbereitet werden: Das Bild sollte idealerweise als HDRI (High Dynamic Range Image) vorliegen, damit \"Anderungen der Helligkeit im Simulator die gew\"unschten Effekte zeigen k\"onnen. 
@@ -151,9 +172,9 @@ Zuguterletzt wurde f\"ur eine optimale Pr\"asentation des Themas ein eigenes Sty
 % BiBTeX files (here: strings, refs, manuals). The IEEEbib.bst bibliography
 % style file from IEEE produces unsorted bibliography list.
 % -------------------------------------------------------------------------
-%\bibliographystyle{IEEEbib}
-\vfill
-\pagebreak
-\bibliographystyle{alpha}
+\bibliographystyle{IEEEbib}
+%\vfill
+%\pagebreak
+%\bibliographystyle{alpha}
 \bibliography{refs}
 \end{document}
