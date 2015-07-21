@@ -1,0 +1,111 @@
+
+\usepackage{listings,xcolor}
+
+\colorlet{punct}{red!60!black}
+\definecolor{background}{HTML}{F9F9F9}
+\definecolor{delim}{RGB}{20,105,176}
+\colorlet{numb}{magenta!60!black}
+ \lstset{language=HTML}
+\lstdefinelanguage{json}{
+    basicstyle=\normalfont\ttfamily,
+    numbers=left,
+    numberstyle=\scriptsize,
+    stepnumber=1,
+    numbersep=4pt,
+    showstringspaces=false,
+    breaklines=true,
+    frame=lines,
+    backgroundcolor=\color{background},
+    literate=
+     *{0}{{{\color{numb}0}}}{1}
+      {1}{{{\color{numb}1}}}{1}
+      {2}{{{\color{numb}2}}}{1}
+      {3}{{{\color{numb}3}}}{1}
+      {4}{{{\color{numb}4}}}{1}
+      {5}{{{\color{numb}5}}}{1}
+      {6}{{{\color{numb}6}}}{1}
+      {7}{{{\color{numb}7}}}{1}
+      {8}{{{\color{numb}8}}}{1}
+      {9}{{{\color{numb}9}}}{1}
+      {:}{{{\color{punct}{:}}}}{1}
+      {,}{{{\color{punct}{,}}}}{1}
+      {\{}{{{\color{delim}{\{}}}}{1}
+      {\}}{{{\color{delim}{\}}}}}{1}
+      {[}{{{\color{delim}{[}}}}{1}
+      {]}{{{\color{delim}{]}}}}{1},
+}
+
+
+
+\subsection{Ablauf Content generierung}
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+\centerline{\includegraphics[width=\linewidth]{tabelle.png}}
+\end{minipage}
+\caption{Screenshot Ausschnitt Content Tabelle.}
+\label{fig:res}
+\end{figure}
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1.0\linewidth}
+\begin{lstlisting}[language=json,firstnumber=1]
+"entry": [{
+  {
+    [...]
+    "gsx$sectionheadline": {
+      "$t": "Kreative Aspekte"
+    },
+    "gsx$articleheadline": {
+      "$t": "Tageszeiten und Wetter"
+    },
+    "gsx$contenttype": {
+      "$t": ""
+    },
+    "gsx$content": {
+      "$t": "Wer im Studio arbeitet, ist in der komfortablen Situation, sich nicht nach der Lichtsituation richten zu m\"ussen. Wer aber Natur-, Sport- oder Eventfotografie betreiben will, kommt um Basiswissen \"uber die Sonne und ihre Auswirkungen nicht herum."
+    },
+    "gsx$internebeschreibung": {
+      "$t": ""
+    }
+  }
+}]
+\end{lstlisting}
+
+\end{minipage}
+\caption{Ausschnitt JSON.}
+\label{fig:res}
+\end{figure}
+
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1.0\linewidth}
+\begin{lstlisting}[language=json]
+<section data-linear="1" id="EWTKcQGzuLWnxUi" style="display: block;">
+  <h1>Kreative Aspekte</h1>
+  <article id="5TrERofVybMWPGC" style="display: block;">
+    <div>
+      <h2>Tageszeiten und Wetter</h2>
+      <p>Wer im Studio arbeitet, ist in der komfortablen Situation, sich nicht nach der Lichtsituation richten zu m\"ussen. Wer aber Natur-, Sport- oder Eventfotografie betreiben will, kommt um Basiswissen \"uber die Sonne und ihre Auswirkungen nicht herum.</p>
+    [...]
+    </div>
+  </article>
+</section>
+\end{lstlisting}
+
+\end{minipage}
+\caption{Ausschnitt fertiges HTML.}
+\label{fig:res}
+\end{figure}
+
+
+\begin{figure}[htb]
+\begin{minipage}[b]{1.0\linewidth}
+  \centering
+\centerline{\includegraphics[width=\linewidth]{ergebniss.png}}
+\end{minipage}
+\caption{Screenshot Ergebnis.}
+\label{fig:res}
+\end{figure}
+
